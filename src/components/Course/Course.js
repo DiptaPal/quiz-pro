@@ -1,0 +1,26 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+
+const Course = ({course, handleQuiz}) => {
+    const {name, logo, total} = course;
+    return (
+        <div>
+            <div className="sm:max-w-7xl md:max-w-xs rounded-md shadow-md">
+                <img src={logo} alt="" className="md:object-cover object-center w-full rounded-t-md h-full md:h-72 bg-indigo-500" />
+                <div className="flex flex-col justify-between p-6 space-y-3">
+                    <div className="space-y-2">
+                        <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
+                    </div>
+                    <p className='text-xl'>Total Quizzes: {total}</p>
+                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-indigo-500 text-white">
+                        <span className='pr-2'>Start Quiz</span>
+                        <FontAwesomeIcon icon={faPenToSquare}></FontAwesomeIcon> 
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Course;

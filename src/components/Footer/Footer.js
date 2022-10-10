@@ -27,12 +27,10 @@ const Footer = () => {
                     </Link>
                     <div className="mt-4 lg:max-w-sm">
                     <p className="text-sm text-deep-purple-50">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam.
+                        A quiz is a form of game or mind sport in which players attempt to answer questions correctly about a certain or variety of subjects.
                     </p>
                     <p className="mt-4 text-sm text-deep-purple-50">
-                        Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                        beatae vitae dicta sunt explicabo.
+                        Quiz, a contest in which participants test what they know by answering questions on one or more topics
                     </p>
                     </div>
                 </div>

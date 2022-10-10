@@ -1,166 +1,96 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Lottie from 'lottie-react'
+import reader from '../../assets/checklist.json'
 import { Link } from 'react-router-dom';
-import logo from '../../images/cover.png'
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <div className="bg-indigo-500">
-            <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
-                <div className="relative flex items-center justify-between">
-                <Link
-                    to="/"
-                    aria-label="Company"
-                    title="Company"
-                    className="inline-flex items-center"
-                >
-                    <img src={logo} alt="" className='w-auto h-20' />
-
-                </Link>
-                <ul className="flex items-center hidden space-x-8 lg:flex">
-                    <li>
-                    <Link
-                        to="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                    >
-                        Home
-                    </Link>
-                    </li>
-                    <li>
-                    <Link
-                        to="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                    >
-                        Statistics
-                    </Link>
-                    </li>
-                    <li>
-                    <Link
-                        to="/"
-                        aria-label="Product pricing"
-                        title="Product pricing"
-                        className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                    >
-                        Blog
-                    </Link>
-                    </li>
-                    <li>
-                    <Link
-                        to="/"
-                        aria-label="About us"
-                        title="About us"
-                        className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                    >
-                        About us
-                    </Link>
-                    </li>
-                </ul>
-                <div className="lg:hidden">
-                    <button
-                    aria-label="Open Menu"
-                    title="Open Menu"
-                    className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
-                    onClick={() => setIsMenuOpen(true)}
-                    >
-                    <svg className="w-5 text-white" viewBox="0 0 24 24">
-                        <path
-                        fill="currentColor"
-                        d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
-                        />
-                        <path
-                        fill="currentColor"
-                        d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"
-                        />
-                        <path
-                        fill="currentColor"
-                        d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"
-                        />
-                    </svg>
-                    </button>
-                    {isMenuOpen && (
-                    <div className="absolute top-0 left-0 w-full">
-                        <div className="p-5 bg-indigo-500 text-white border rounded shadow-sm">
-                        <div className="flex items-center justify-between mb-4">
-                            <div>
-                            <Link
-                                to="/"
-                                aria-label="Company"
-                                title="Company"
-                                className="inline-flex items-center"
-                            >
-                                <img src={logo} alt="" className='w-auto h-20'/>
-                            </Link>
-                            </div>
-                            <div>
-                            <button
-                                aria-label="Close Menu"
-                                title="Close Menu"
-                                className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                <svg className="w-5 text-white" viewBox="0 0 24 24">
-                                <path
-                                    fill="currentColor"
-                                    d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
-                                />
-                                </svg>
-                            </button>
-                            </div>
+        <div>
+            {/* Header section start */}
+            <div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-24'>
+                <div className='flex flex-col items-center justify-between lg:flex-row'>
+                    <div className='mb-10 lg:max-w-lg  lg:pr-5 lg:mb-0'>
+                    <div className='max-w-xl mb-6 lg:mt-8'>
+                        <div>
+                        <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-yellow-400'>
+                            On Sale!
+                        </p>
                         </div>
-                        <nav>
-                            <ul className="space-y-4">
-                            <li>
-                                <Link
-                                to="/"
-                                aria-label="Our product"
-                                title="Our product"
-                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                >
-                                Home
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                to="/"
-                                aria-label="Our product"
-                                title="Our product"
-                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                >
-                                Statistics
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                to="/"
-                                aria-label="Product pricing"
-                                title="Product pricing"
-                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                >
-                                Blog
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                to="/"
-                                aria-label="About us"
-                                title="About us"
-                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                >
-                                About us
-                                </Link>
-                            </li>
-                            </ul>
-                        </nav>
-                        </div>
+                        <h2 className='max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none'>
+                        A reader lives a <br className='hidden md:block' /> thousand lives{' '}
+                        <span className='inline-block text-blue-400'>before he dies</span>
+                        </h2>
+                        <p className='text-base text-gray-700 md:text-lg'>
+                        Books are a uniquely portable magic. Books serve to show a man
+                        that those original thoughts of his aren’t very new after all. The
+                        man who does not read good books is no better than the man who
+                        can’t.
+                        </p>
                     </div>
-                    )}
-                </div>
+                    <div className='flex flex-col items-center md:flex-row'>
+                        <Link
+                        to='/books'
+                        className='inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-blue-400 hover:bg-blue-700 focus:shadow-outline focus:outline-none'
+                        >
+                        <span className='mr-3'>Visit Store</span>
+                        <svg
+                            width='24'
+                            height='24'
+                            viewBox='0 0 24 24'
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth='2'
+                            className='w-4'
+                        >
+                            <polyline
+                            fill='none'
+                            stroke='currentColor'
+                            strokeMiterlimit='10'
+                            points='4,4 22,4 19,14 4,14 '
+                            />
+                            <circle
+                            cx='4'
+                            cy='22'
+                            r='2'
+                            strokeLinejoin='miter'
+                            strokeLinecap='square'
+                            stroke='none'
+                            fill='currentColor'
+                            />
+                            <circle
+                            cx='20'
+                            cy='22'
+                            r='2'
+                            strokeLinejoin='miter'
+                            strokeLinecap='square'
+                            stroke='none'
+                            fill='currentColor'
+                            />
+                            <polyline
+                            fill='none'
+                            stroke='currentColor'
+                            strokeMiterlimit='10'
+                            points='1,1 4,4 4,14 2,18 23,18 '
+                            />
+                        </svg>
+                        </Link>
+                        <Link
+                        to='/about'
+                        aria-label=''
+                        className='inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-blue-700'
+                        >
+                        Learn More
+                        </Link>
+                    </div>
+                    </div>
+                    <div className='relative lg:w-1/2 '>
+                    <div className='w-full lg:w-4/5 lg:ml-auto h-56  sm:h-96 block'>
+                        <Lottie animationData={reader} loop={true} />
+                    </div>
+                    </div>
                 </div>
             </div>
+            {/* Header section end */}
         </div>
     );
 };
