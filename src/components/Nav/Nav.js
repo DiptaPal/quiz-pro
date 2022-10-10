@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../images/cover.png'
 
 const Nav = () => {
@@ -19,44 +19,52 @@ const Nav = () => {
                 </Link>
                 <ul className="flex items-center hidden space-x-8 lg:flex">
                     <li>
-                    <Link
-                        to="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                    <NavLink
+                        to="/home"
+                        aria-label="Home"
+                        title="Home"
+                        className={({ isActive }) =>
+                            isActive ? 'font-medium tracking-wide transition-colors duration-200 bg-white text-indigo-500 py-2 px-4 rounded-md' : 'font-medium tracking-wide transition-colors duration-200 text-white hover:bg-white hover:text-indigo-500 py-2 px-4 rounded-md'
+                        }
                     >
                         Home
-                    </Link>
+                    </NavLink>
                     </li>
                     <li>
-                    <Link
-                        to="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                    <NavLink
+                        to="/statistics"
+                        aria-label="Statistics"
+                        title="Statistics"
+                        className={({ isActive }) =>
+                            isActive ? 'font-medium tracking-wide transition-colors duration-200 bg-white text-indigo-500 py-2 px-4 rounded-md' : 'font-medium tracking-wide transition-colors duration-200 text-white hover:bg-white hover:text-indigo-500 py-2 px-4 rounded-md'
+                        }
                     >
                         Statistics
-                    </Link>
+                    </NavLink>
                     </li>
                     <li>
-                    <Link
-                        to="/"
-                        aria-label="Product pricing"
-                        title="Product pricing"
-                        className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                    <NavLink
+                        to="/blog"
+                        aria-label="Blog"
+                        title="Blog"
+                        className={({ isActive }) =>
+                            isActive ? 'font-medium tracking-wide transition-colors duration-200 bg-white text-indigo-500 py-2 px-4 rounded-md' : 'font-medium tracking-wide transition-colors duration-200 text-white hover:bg-white hover:text-indigo-500 py-2 px-4 rounded-md'
+                        }
                     >
                         Blog
-                    </Link>
+                    </NavLink>
                     </li>
                     <li>
-                    <Link
-                        to="/"
+                    <NavLink
+                        to="/about"
                         aria-label="About us"
                         title="About us"
-                        className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                        className={({ isActive }) =>
+                            isActive ? 'font-medium tracking-wide transition-colors duration-200 bg-white text-indigo-500 py-2 px-4 rounded-md' : 'font-medium tracking-wide transition-colors duration-200 text-white hover:bg-white hover:text-indigo-500 py-2 px-4 rounded-md'
+                        }
                     >
                         About us
-                    </Link>
+                    </NavLink>
                     </li>
                 </ul>
                 <div className="lg:hidden">
@@ -114,44 +122,52 @@ const Nav = () => {
                         <nav>
                             <ul className="space-y-4">
                             <li>
-                                <Link
+                                <NavLink
                                 to="/"
-                                aria-label="Our product"
-                                title="Our product"
-                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                aria-label="Home"
+                                title="Home"
+                                className={({ isActive }) =>
+                                    isActive ? 'font-medium tracking-wide transition-colors duration-200 bg-white text-indigo-500 py-2 px-4 rounded-md' : 'font-medium tracking-wide transition-colors duration-200  text-white hover:bg-white hover:text-indigo-500 py-2 px-4 rounded-md'
+                                }
                                 >
                                 Home
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
-                                to="/"
-                                aria-label="Our product"
-                                title="Our product"
-                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                <NavLink
+                                to="/statistics"
+                                aria-label="Statistics"
+                                title="Statistics"
+                                className={({ isActive }) =>
+                                    isActive ? 'font-medium tracking-wide transition-colors duration-200 bg-white text-indigo-500 py-2 px-4 rounded-md' : 'font-medium tracking-wide transition-colors duration-200 text-white hover:bg-white hover:text-indigo-500 py-2 px-4 rounded-md'
+                                }
                                 >
                                 Statistics
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
-                                to="/"
-                                aria-label="Product pricing"
-                                title="Product pricing"
-                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                <NavLink
+                                to="/blog"
+                                aria-label="Blog"
+                                title="Blog"
+                                className={({ isActive }) =>
+                                    isActive ? 'font-medium tracking-wide transition-colors duration-200 bg-white text-indigo-500 py-2 px-4 rounded-md' : 'font-medium tracking-wide transition-colors duration-200 text-white hover:bg-white hover:text-indigo-500 py-2 px-4 rounded-md'
+                                }
                                 >
                                 Blog
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
-                                to="/"
+                                <NavLink
+                                to="/about"
                                 aria-label="About us"
                                 title="About us"
-                                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                className={({ isActive }) =>
+                                isActive ? 'font-medium tracking-wide transition-colors duration-200 bg-white text-indigo-500 py-2 px-4 rounded-md' : 'font-medium tracking-wide transition-colors duration-200 text-white hover:bg-white hover:text-indigo-500 py-2 px-4 rounded-md'
+                                }
                                 >
                                 About us
-                                </Link>
+                                </NavLink>
                             </li>
                             </ul>
                         </nav>

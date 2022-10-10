@@ -5,9 +5,6 @@ import Header from '../Header/Header';
 
 const Home = () => {
     const courses = useContext(QuizContext)
-    const handleQuiz = (courses) =>{
-
-    }
     return (
         <div>
            <div>
@@ -21,7 +18,6 @@ const Home = () => {
                         courses.map(course => <Course 
                             key={course.id}
                             course={course}
-                            handleQuiz={handleQuiz}
                         ></Course>)
                     }
                 </div>
