@@ -35,7 +35,7 @@ const Header = () => {
                         title="Our product"
                         className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                     >
-                        Features
+                        Statistics
                     </Link>
                     </li>
                     <li>
@@ -45,7 +45,7 @@ const Header = () => {
                         title="Product pricing"
                         className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                     >
-                        Pricing
+                        Blog
                     </Link>
                     </li>
                     <li>
@@ -130,7 +130,7 @@ const Header = () => {
                                 title="Our product"
                                 className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
                                 >
-                                Features
+                                Statistics
                                 </Link>
                             </li>
                             <li>
@@ -140,7 +140,7 @@ const Header = () => {
                                 title="Product pricing"
                                 className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
                                 >
-                                Pricing
+                                Blog
                                 </Link>
                             </li>
                             <li>
