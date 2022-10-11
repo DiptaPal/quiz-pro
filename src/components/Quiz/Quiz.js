@@ -1,19 +1,25 @@
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
 
 import Option from '../Option/Option';
+import { DecreaseContext, IncreaseContext } from '../Quizzes/Quizzes';
 const Quiz = ({ques, index}) => {
     const {question, options, correctAnswer} = ques;
     const [isVisible, setVisible] = useState(false)
 
+    const [increase, setIncrease] = useContext(IncreaseContext);
+    const [decrease, setDecrease] = useContext(DecreaseContext);
     const handleSelectBtn = option =>{
         if(option === correctAnswer){
             toast.info("Answer is Correct!!!")
+            setIncrease(increase + 1)
+
         }
         else{
             toast.error("Answer is Wrong!!!")
+            setDecrease(decrease + 1)
         }
     }
     return (
@@ -23,10 +29,12 @@ const Quiz = ({ques, index}) => {
                     isVisible ?  <FontAwesomeIcon icon={faEyeSlash}></FontAwesomeIcon> : <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
                 }
             </div>
+
             <div className='font-semibold mb-5'>
                 <span>Quiz<span className='pl-2'>{index+1}</span>:</span>
                 <span className='pl-2'>{question}</span>
             </div>
+
             <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-3'>
             {
                 options.map((option, index_2) => <Option
