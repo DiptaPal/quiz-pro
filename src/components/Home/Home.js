@@ -1,6 +1,8 @@
 import React from 'react';
+import Feedback from '../Feedback/Feedback';
 
 import Header from '../Header/Header';
+import Package from '../Package/Package';
 import Topics from '../Topics/Topics';
 
 const Home = () => {
@@ -8,6 +10,8 @@ const Home = () => {
         <div>
             <Header></Header>
             <Topics></Topics>
+            <Package></Package>
+            <Feedback></Feedback>
         </div>
     );
 };

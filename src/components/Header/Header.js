@@ -13,11 +13,6 @@ const Header = () => {
                 <div className='flex flex-col items-center justify-between lg:flex-row'>
                     <div className='mb-10 lg:max-w-lg  lg:pr-5 lg:mb-0'>
                     <div className='max-w-xl mb-6 lg:mt-8'>
-                        <div>
-                        <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-yellow-400'>
-                            New!
-                        </p>
-                        </div>
                         <h2 className='max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none'>
                         Train your brain<br className='hidden md:block' /> and{' '}
                         <span className='inline-block text-indigo-500'>improve your IQ</span>
@@ -44,7 +39,7 @@ const Header = () => {
                     </div>
                     </div>
                     <div className='relative lg:w-1/2 '>
-                    <div className='w-full lg:w-4/5 lg:ml-auto h-56  sm:h-96 block'>
+                    <div className='w-full h-full flex justify-center'>
                         <Lottie animationData={reader} loop={true} />
                     </div>
                     </div>
