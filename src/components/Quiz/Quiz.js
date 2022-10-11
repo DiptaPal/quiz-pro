@@ -32,7 +32,7 @@ const Quiz = ({ques, index}) => {
 
             <div className='font-semibold mb-5'>
                 <span>Quiz<span className='pl-2'>{index+1}</span>:</span>
-                <span className='pl-2'>{question}</span>
+                <span className='pl-2'>{question.slice(3,-4)}</span>
             </div>
 
             <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-3'>

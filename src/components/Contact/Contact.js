@@ -35,7 +35,7 @@ const Contact = () => {
                         <Lottie animationData={contact} loop={true} />
                     </div>
                 </div>
-                <form noValidate="" className="space-y-6 ng-untouched ng-pristine ng-valid bg-indigo-500 px-12 py-12 rounded-md text-white my-auto flex flex-col gap-2">
+                <form className="space-y-6 ng-untouched ng-pristine ng-valid bg-indigo-500 px-12 py-12 rounded-md text-white my-auto flex flex-col gap-2">
                     <div>
                         <label htmlFor="name" className="text-2xl">Full name</label>
                         <input id="name" type="text" placeholder="" className="w-full p-3 rounded text-indigo-500 text-xl outline-none" />
@@ -48,7 +48,7 @@ const Contact = () => {
                         <label htmlFor="message" className="text-2xl">Message</label>
                         <textarea id="message" rows="3" className="w-full p-3 rounded text-indigo-500 text-xl outline-none" spellCheck="false"></textarea>
                     </div>
-                    <Link to='/'  className="w-full p-3 text-sm text-center font-bold tracking-wide uppercase rounded bg-white text-indigo-500 hover:bg-blue-700 hover:text-white">Send Message</Link>
+                    <Link className="w-full p-3 text-sm text-center font-bold tracking-wide uppercase rounded bg-white text-indigo-500 hover:bg-blue-700 hover:text-white">Send Message</Link>
                 </form>
             </div>
         </div>

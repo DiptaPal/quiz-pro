@@ -183,7 +183,7 @@ const Nav = () => {
                             </li>
                             <li>
                                 <NavLink
-                                to="/about"
+                                to="/contact"
                                 aria-label="Contact"
                                 title="Contact"
                                 className={({ isActive }) =>
