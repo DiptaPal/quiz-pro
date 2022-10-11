@@ -9,7 +9,7 @@ const Nav = () => {
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
                 <div className="relative flex items-center justify-between">
                 <Link
-                    to="/"
+                    to="/home"
                     aria-label="Company"
                     title="Company"
                     className="inline-flex items-center"

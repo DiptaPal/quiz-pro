@@ -15,7 +15,7 @@ const Course = ({course}) => {
                     </div>
                     <p className='text-xl'>Total Quizzes: {total}</p>
                     <Link to={`/quiz/${id}`}>
-                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-indigo-500 text-white">
+                        <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-indigo-500 hover:bg-blue-700 text-white transition-property: color duration-700">
                             <span className='pr-2'>Start Quiz</span>
                             <FontAwesomeIcon icon={faPenToSquare}></FontAwesomeIcon> 
                         </button>
