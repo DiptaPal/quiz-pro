@@ -68,14 +68,14 @@ const Nav = () => {
                     </li>
                     <li>
                     <NavLink
-                        to="/about"
-                        aria-label="About us"
-                        title="About us"
+                        to="/contact"
+                        aria-label="Contact"
+                        title="Contact"
                         className={({ isActive }) =>
                             isActive ? 'font-medium tracking-wide transition-colors duration-200 bg-white text-indigo-500 py-2 px-4 rounded-md' : 'font-medium tracking-wide transition-colors duration-200 text-white hover:bg-white hover:text-indigo-500 py-2 px-4 rounded-md'
                         }
                     >
-                        About us
+                        Contact
                     </NavLink>
                     </li>
                 </ul>
@@ -184,13 +184,13 @@ const Nav = () => {
                             <li>
                                 <NavLink
                                 to="/about"
-                                aria-label="About us"
-                                title="About us"
+                                aria-label="Contact"
+                                title="Contact"
                                 className={({ isActive }) =>
                                 isActive ? 'font-medium tracking-wide transition-colors duration-200 bg-white text-indigo-500 py-2 px-4 rounded-md' : 'font-medium tracking-wide transition-colors duration-200 text-white hover:bg-white hover:text-indigo-500 py-2 px-4 rounded-md'
                                 }
                                 >
-                                About us
+                                Contact
                                 </NavLink>
                             </li>
                             </ul>

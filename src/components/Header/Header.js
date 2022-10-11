@@ -35,7 +35,7 @@ const Header = () => {
                         <FontAwesomeIcon icon={faComputerMouse}></FontAwesomeIcon>
                         </Link>
                         <Link
-                        to='/about'
+                        to='/contact'
                         aria-label=''
                         className='inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-blue-700'
                         >

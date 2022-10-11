@@ -2,8 +2,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
-import About from './components/About/About';
 import Blog from './components/Blog/Blog';
+import Contact from './components/Contact/Contact';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Home from './components/Home/Home';
 import Quizzes from './components/Quizzes/Quizzes';
@@ -42,8 +42,8 @@ function App() {
           element: <Blog></Blog>
         },
         {
-          path: '/about',
-          element: <About></About>
+          path: '/contact',
+          element: <Contact></Contact>
         },
         {
           path: 'quiz/:quizID',
@@ -64,7 +64,7 @@ function App() {
       <RouterProvider router={router}></RouterProvider>
       <ToastContainer
         position="top-right"
-        autoClose={1000}
+        autoClose={500}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
