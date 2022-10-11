@@ -58,7 +58,7 @@ function App() {
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
       <ToastContainer
-        position="top-right"
+        position="bottom-right"
         autoClose={1000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -69,8 +69,6 @@ function App() {
         pauseOnHover
         theme="light"
         />
-      <ToastContainer />
-
     </div>
   );
 }

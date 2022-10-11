@@ -37,6 +37,12 @@ const Quiz = ({ques, index}) => {
                 ></Option>)
             }
             </div>
+           {
+            isVisible &&  
+            <div className='mt-3'>
+                <p className='py-2 bg-green-500 rounded-md text-indigo-700'><span className='pr-3 text-white'>Answer is:</span> <span className='font-bold'>{correctAnswer}</span></p>
+            </div>
+           }
         </div>
     );
 };
