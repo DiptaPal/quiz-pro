@@ -6,7 +6,7 @@ const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div className="bg-indigo-500 shadow-xl">
-            <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
+            <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24">
                 <div className="relative flex items-center justify-between">
                 <Link
                     to="/home"
