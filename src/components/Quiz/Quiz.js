@@ -11,7 +11,6 @@ const Quiz = ({ques, index}) => {
     const handleSelectBtn = option =>{
         if(option === correctAnswer){
             toast.info("Answer is Correct!!!")
-            console.log(option);
         }
         else{
             toast.error("Answer is Wrong!!!")
@@ -34,13 +33,14 @@ const Quiz = ({ques, index}) => {
                     key={index_2}
                     option={option}
                     handleSelectBtn={handleSelectBtn}
+                    correctAnswer={correctAnswer}
                 ></Option>)
             }
             </div>
            {
             isVisible &&  
             <div className='mt-3'>
-                <p className='py-2 bg-green-500 rounded-md text-indigo-700'><span className='pr-3 text-white'>Answer is:</span> <span className='font-bold'>{correctAnswer}</span></p>
+                <p className='py-2 bg-green-500 rounded-md text-indigo-700'><span className='pr-3 text-black'>Answer is:</span> <span className='font-bold'>{correctAnswer}</span></p>
             </div>
            }
         </div>

@@ -7,8 +7,8 @@ const Course = ({course}) => {
     const {id, name, logo, total} = course;
     return (
         <div>
-            <div className="sm:max-w-7xl md:max-w-xs rounded-md shadow-md">
-                <img src={logo} alt="" className="md:object-cover object-center w-full rounded-t-md h-full md:h-72 bg-indigo-500" />
+            <div className=" rounded-md shadow-md">
+                <img src={logo} alt="" className=" w-full rounded-t-md h-full md:h-72 bg-indigo-500" />
                 <div className="flex flex-col justify-between p-6 space-y-3">
                     <div className="space-y-2">
                         <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>

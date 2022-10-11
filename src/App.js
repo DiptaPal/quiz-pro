@@ -58,7 +58,7 @@ function App() {
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
       <ToastContainer
-        position="bottom-right"
+        position="top-right"
         autoClose={1000}
         hideProgressBar={false}
         newestOnTop={false}
