@@ -1,36 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import { QuizContext } from '../../layouts/Main';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Sector, Cell, BarChart, Bar, } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Sector, Cell, BarChart, Bar, Label } from 'recharts';
 
-
-
-    const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
-
-    const RADIAN = Math.PI / 180;
-    const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
-    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN);
-    const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-    return (
-        <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-        {`${(percent * 100).toFixed(0)}%`}
-        </text>
-    );
-    };
 
 const Statistics = () => {
-    const courses = useContext(QuizContext);
-    const totalQuestion = courses;
+    const course = useContext(QuizContext);
     return (
-        <div className='max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto mt-20 mb-40'>
+        <div className='max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto mt-20 mb-40'>
             <h2 className='text-center text-3xl font-semibold text-indigo-500 border-b-4 border-indigo-500 pb-2 w-48 mx-auto'>Quiz Analysis</h2>
             <div className='mt-20'>
-                <ResponsiveContainer width="95%" height={400}>
+                <ResponsiveContainer width="100%" height={600}>
                     <LineChart
                     width={500}
                     height={300}
-                    data={totalQuestion}
+                    data={course}
                     margin={{
                         top: 5,
                         right: 30,
@@ -39,8 +22,9 @@ const Statistics = () => {
                     }}
                     >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
+                    <XAxis dataKey="name" >
+                    </XAxis>
+                    <YAxis label={{ value: 'Questions', angle: -90, position: 'insideLeft', textAnchor: 'middle' }} />
                     <Tooltip />
                     <Line type="monotone" dataKey="total" stroke="#6366f1" strokeWidth={2} />
                     </LineChart>
@@ -48,11 +32,11 @@ const Statistics = () => {
             </div>
 
             <div className='mt-40'>
-                <ResponsiveContainer width="95%" height={400}>
+                <ResponsiveContainer width="95%" height={600}>
                     <BarChart
                     width={500}
                     height={300}
-                    data={totalQuestion}
+                    data={course}
                     margin={{
                         top: 5,
                         right: 30,
@@ -61,15 +45,22 @@ const Statistics = () => {
                     }}
                     >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
+                    <XAxis dataKey="name">
+                    </XAxis>
+                    <YAxis label={{ value: 'Questions', angle: -90, position: 'insideLeft', textAnchor: 'middle' }} />
                     <Tooltip />
-                    <Bar dataKey="total" fill="#8884d8" />
+                    <Bar dataKey="total" fill="#6366f1" />
                     </BarChart>
                 </ResponsiveContainer>
             </div>
 
-            
+            <div style={{ width: '100%', height: 300 }} className='mt-40'>
+              <ResponsiveContainer>
+                <PieChart>
+                  <Pie dataKey="total" data={course} fill="#8884d8" label />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
         </div>
     );
 };

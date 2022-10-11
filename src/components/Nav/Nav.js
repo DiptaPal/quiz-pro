@@ -5,7 +5,7 @@ import logo from '../../images/cover.png'
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <div className="bg-indigo-500">
+        <div className="bg-indigo-500 shadow-xl">
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8">
                 <div className="relative flex items-center justify-between">
                 <Link
@@ -32,7 +32,7 @@ const Nav = () => {
                     </li>
                     <li>
                     <NavLink
-                        to="quiz/1"
+                        to="/topics"
                         aria-label="topics"
                         title="topics"
                         className={({ isActive }) =>
@@ -135,7 +135,7 @@ const Nav = () => {
                             <ul className="space-y-4">
                             <li>
                                 <NavLink
-                                to="/"
+                                to="/home"
                                 aria-label="Home"
                                 title="Home"
                                 className={({ isActive }) =>
@@ -147,7 +147,7 @@ const Nav = () => {
                             </li>
                             <li>
                             <NavLink
-                                to="quiz/1"
+                                to="/topics"
                                 aria-label="topics"
                                 title="topics"
                                 className={({ isActive }) =>

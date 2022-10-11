@@ -8,7 +8,7 @@ const Course = ({course}) => {
     return (
         <div>
             <div className=" rounded-md shadow-md">
-                <img src={logo} alt="" className=" w-full rounded-t-md h-full md:h-72 bg-indigo-500" />
+                <img src={logo} alt="" className="w-full rounded-t-md h-full bg-indigo-500" />
                 <div className="flex flex-col justify-between p-6 space-y-3">
                     <div className="space-y-2">
                         <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>

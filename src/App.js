@@ -8,6 +8,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 import Home from './components/Home/Home';
 import Quizzes from './components/Quizzes/Quizzes';
 import Statistics from './components/Statistics/Statistics';
+import Topics from './components/Topics/Topics';
 import Main from './layouts/Main';
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
         {
           path: '/home',
           element: <Home></Home>
+        },
+        {
+          path: '/topics',
+          element: <Topics></Topics>
         },
         {
           path: '/statistics',
