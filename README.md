@@ -4,7 +4,7 @@
 
 ## Repository Link: https://github.com/programming-hero-web-course2/b6-quiz-crackerz-DiptaPal
 
-### Doing That:
+### <u>Which i used:</u>
 * React
 * Tialwind
 * Mamba UI

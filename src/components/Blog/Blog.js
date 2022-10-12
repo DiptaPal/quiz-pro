@@ -4,7 +4,7 @@ const Blog = () => {
     return (
         <div className="space-y-4 px-10 md:px-0 max-w-screen-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto mt-16 mb-20">
             <h1 className='text-3xl font-bold text-center border-b-4 border-indigo-500 pb-2 text-indigo-500 mb-10'>Frequently Asked Questions</h1>
-            <details className="group border-l-4 border-green-500 bg-gray-50 p-6" open>
+            <details className="group border-l-4 border-indigo-500 bg-gray-50 p-6" open>
                 <summary className="flex cursor-pointer items-center justify-between">
                 <h5 className="text-lg md:text-2xl font-medium text-gray-900">
                     What is the purpose of react-router?
@@ -35,7 +35,7 @@ const Blog = () => {
                 </p>
             </details>
 
-            <details className="group border-l-4 border-green-500 bg-gray-50 p-6">
+            <details className="group border-l-4 border-indigo-500 bg-gray-50 p-6">
                 <summary className="flex cursor-pointer items-center justify-between">
                 <h5 className="text-lg md:text-2xl font-medium text-gray-900">
                     How does context api works?
@@ -65,7 +65,7 @@ const Blog = () => {
                 </p>
             </details>
 
-            <details className="group border-l-4 border-green-500 bg-gray-50 p-6">
+            <details className="group border-l-4 border-indigo-500 bg-gray-50 p-6">
                 <summary className="flex cursor-pointer items-center justify-between">
                 <h5 className="text-lg md:text-2xl font-medium text-gray-900">
                     What is useRef( )?
