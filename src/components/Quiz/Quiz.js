@@ -5,12 +5,16 @@ import { toast } from 'react-toastify';
 
 import Option from '../Option/Option';
 import { DecreaseContext, IncreaseContext } from '../Quizzes/Quizzes';
+
 const Quiz = ({ques, index}) => {
     const {question, options, correctAnswer} = ques;
     const [isVisible, setVisible] = useState(false)
 
     const [increase, setIncrease] = useContext(IncreaseContext);
     const [decrease, setDecrease] = useContext(DecreaseContext);
+
+    const [disable, setDisable] = useState(false)
+
     const handleSelectBtn = option =>{
         if(option === correctAnswer){
             toast.info("Answer is Correct!!!")
@@ -20,6 +24,15 @@ const Quiz = ({ques, index}) => {
         else{
             toast.error("Answer is Wrong!!!")
             setDecrease(decrease + 1)
+        }
+    }
+
+    const handleDisable = (bool) =>{
+        if(bool === true){
+            setDisable(true)
+        }
+        else{
+            setDisable(false)
         }
     }
     return (
@@ -42,6 +55,8 @@ const Quiz = ({ques, index}) => {
                     option={option}
                     handleSelectBtn={handleSelectBtn}
                     correctAnswer={correctAnswer}
+                    handleDisable={handleDisable}
+                    disable={disable}
                 ></Option>)
             }
             </div>

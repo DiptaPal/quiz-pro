@@ -1,9 +1,8 @@
 import React, { useId, useState } from 'react';
 
-const Option = ({option, handleSelectBtn, correctAnswer}) => {
+const Option = ({option, handleSelectBtn, correctAnswer, handleDisable, disable}) => {
     const [isSelected, setSelected] = useState(false);
     const [isCorrect, setCorrect] = useState();
-    const [disable, setDisable] = useState(false)
 
     const handleCorrect = option => {
         if(option === correctAnswer){
@@ -13,6 +12,7 @@ const Option = ({option, handleSelectBtn, correctAnswer}) => {
             setCorrect(false);
         }  
     }
+
     
     return (
         <div>
@@ -20,7 +20,7 @@ const Option = ({option, handleSelectBtn, correctAnswer}) => {
                 <button 
                 className= {`border border-indigo-500 py-2 px-3 rounded-md shadow-md mb-3 flex justify-center items-center cursor-pointer h-[100px] w-full ${isSelected ? `${isCorrect ? 'bg-green-500' : 'bg-red-600 text-white'} ` : 'bg-none'}`}
                 
-                onClick={()=>{handleSelectBtn(option);handleCorrect(option); setSelected(true); setDisable(true)}}
+                onClick={()=>{handleSelectBtn(option);handleCorrect(option); setSelected(true); handleDisable(true)}}
                 disabled={disable}
                 >
                     <p>{option}</p>
