@@ -1,4 +1,4 @@
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faEyeSlash, faL } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
@@ -9,6 +9,7 @@ import { DecreaseContext, IncreaseContext } from '../Quizzes/Quizzes';
 const Quiz = ({ques, index}) => {
     const {question, options, correctAnswer} = ques;
     const [isVisible, setVisible] = useState(false)
+    const [answer, showAnswer] = useState(true)
 
     const [increase, setIncrease] = useContext(IncreaseContext);
     const [decrease, setDecrease] = useContext(DecreaseContext);
@@ -16,6 +17,7 @@ const Quiz = ({ques, index}) => {
     const [disable, setDisable] = useState(false)
 
     const handleSelectBtn = option =>{
+        showAnswer(!answer)
         if(option === correctAnswer){
             toast.info("Answer is Correct!!!")
             setIncrease(increase + 1)
@@ -38,11 +40,11 @@ const Quiz = ({ques, index}) => {
     return (
         <div className='mx-3 sm:mx-0'>
             <div className='max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl border border-indigo-500 rounded shadow-md mx-auto py-8 px-5 text-center mb-12 text-2xl text-indigo-500 relative'>
-                <div className='absolute top-0 right-2 cursor-pointer' onClick={() => setVisible(!isVisible)}>
+                <button className='absolute top-0 right-2 cursor-pointer' disabled={answer} onClick={() => setVisible(!isVisible)}>
                     {
                         isVisible ?  <FontAwesomeIcon icon={faEyeSlash}></FontAwesomeIcon> : <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
                     }
-                </div>
+                </button>
 
                 <div className='font-semibold mb-5'>
                     <span>Quiz<span className='pl-2'>{index+1}</span>:</span>

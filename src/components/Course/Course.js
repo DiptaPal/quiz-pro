@@ -7,7 +7,7 @@ const Course = ({course}) => {
     const {id, name, logo, total} = course;
     return (
         <div>
-            <div className=" rounded-md shadow-md">
+            <div className=" rounded-md shadow-md hover:border-2 hover:border-indigo-500 border-2 border-white transition-colors duration-700">
                 <img src={logo} alt="" className="w-full rounded-t-md h-full bg-indigo-500" />
                 <div className="flex flex-col justify-between p-6 space-y-3">
                     <div className="space-y-2">
