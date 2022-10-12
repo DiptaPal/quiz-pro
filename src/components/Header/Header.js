@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from 'lottie-react'
-import reader from '../../assets/checklist.json'
+import quiz from '../../assets/checklist.json'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComputerMouse } from '@fortawesome/free-solid-svg-icons';
@@ -40,7 +40,7 @@ const Header = () => {
                     </div>
                     <div className='relative lg:w-1/2 '>
                     <div className='w-full h-full flex justify-center'>
-                        <Lottie animationData={reader} loop={true} />
+                        <Lottie animationData={quiz} loop={true} />
                     </div>
                     </div>
                 </div>

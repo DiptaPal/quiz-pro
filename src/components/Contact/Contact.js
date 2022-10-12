@@ -1,7 +1,7 @@
 import Lottie from 'lottie-react'
 import React from 'react';
 import { Link } from 'react-router-dom';
-import contact from '../../assets/contact.json'
+import contactGif from '../../assets/contact.json'
 
 const Contact = () => {
     return (
@@ -32,7 +32,7 @@ const Contact = () => {
                         </p>
                     </div>
                     <div className='max-w-md max-h-md mx-auto'>
-                        <Lottie animationData={contact} loop={true} />
+                        <Lottie animationData={contactGif} loop={true} />
                     </div>
                 </div>
                 <form className="space-y-6 ng-untouched ng-pristine ng-valid bg-indigo-500 px-12 py-12 rounded-md text-white my-auto flex flex-col gap-2">
