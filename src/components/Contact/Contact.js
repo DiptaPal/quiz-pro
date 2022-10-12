@@ -38,17 +38,17 @@ const Contact = () => {
                 <form className="space-y-6 ng-untouched ng-pristine ng-valid bg-indigo-500 px-12 py-12 rounded-md text-white my-auto flex flex-col gap-2">
                     <div>
                         <label htmlFor="name" className="text-2xl">Full name</label>
-                        <input id="name" type="text" placeholder="" className="w-full p-3 rounded text-indigo-500 text-xl outline-none" />
+                        <input id="name" type="text" placeholder="name" className="w-full p-3 rounded text-indigo-500 text-xl outline-none" />
                     </div>
                     <div>
                         <label htmlFor="email" className="text-2xl">Email</label>
-                        <input id="email" type="email" className="w-full p-3 rounded text-indigo-500 text-xl outline-none"/>
+                        <input id="email" type="email" placeholder='email' className="w-full p-3 rounded text-indigo-500 text-xl outline-none"/>
                     </div>
                     <div>
                         <label htmlFor="message" className="text-2xl">Message</label>
-                        <textarea id="message" rows="3" className="w-full p-3 rounded text-indigo-500 text-xl outline-none" spellCheck="false"></textarea>
+                        <textarea id="message" rows="3" placeholder='message...' className="w-full p-3 rounded text-indigo-500 text-xl outline-none" spellCheck="false"></textarea>
                     </div>
-                    <Link className="w-full p-3 text-sm text-center font-bold tracking-wide uppercase rounded bg-white text-indigo-500 hover:bg-blue-700 hover:text-white">Send Message</Link>
+                    <Link className="w-full p-3 text-sm text-center font-bold tracking-wide uppercase rounded bg-slate-700 text-white hover:bg-blue-700 hover:text-white">Send Message</Link>
                 </form>
             </div>
         </div>

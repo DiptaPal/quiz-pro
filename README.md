@@ -4,6 +4,16 @@
 
 ## Repository Link: https://github.com/programming-hero-web-course2/b6-quiz-crackerz-DiptaPal
 
+## <u>Features:</u>
+* user can see different pages through navbar
+* user can participate different type quizzes
+* user can see the score for each quiz
+* user can see our packages
+* user can see quiz analysis graph in statistics section
+* user can read the blog
+
+
+
 ### <u>Which i used:</u>
 * React
 * Tialwind
