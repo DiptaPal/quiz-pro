@@ -3,8 +3,8 @@ import React from 'react';
 const Package = () => {
     return (
         <div>
-            <div className="px-4 py-16 mx-auto max-w-xs sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-                <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <div className="px-10 py-16 mx-auto max-w-xl md:max-w-full lg:max-w-screen-2xl xl:max-w-full md:px-24 lg:py-20">
+                <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-xl md:mb-12">
                     <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
                     <span className="relative inline-block">
                         <svg
@@ -33,7 +33,7 @@ const Package = () => {
                     </span>
                     </h2>
                 </div>
-                <div className="grid max-w-md gap-10 row-gap-5 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
+                <div className="grid max-w-screen-xl  gap-10 row-gap-5 md:max-w-screen-lg lg:max-w-screen-lg sm:row-gap-10 md:grid-cols-2 lg:grid-cols-3 xl:max-w-screen-2xl sm:mx-auto">
                     <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow">
                     <div className="text-center text-indigo-500">
                         <div className="text-lg font-semibold">Start</div>

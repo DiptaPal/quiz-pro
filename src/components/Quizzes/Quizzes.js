@@ -12,7 +12,9 @@ const Quizzes = () => {
         <IncreaseContext.Provider value={[increase, setIncrease]}>
             <DecreaseContext.Provider value={[decrease, setDecrease]}>
                 <div className='mt-16 mb-32'>
-                    <h1 className='text-4xl font-bold text-center mb-10'>Quiz of <span className='text-indigo-500'>{quizzes.data.name}</span></h1>
+                    <h1 className='text-4xl font-bold text-center mb-6'>Quiz of <span className='text-indigo-500'>{quizzes.data.name}</span></h1>
+
+                    <h2 className='text-center pb-10'>You have only one chance to select the answer from each question.</h2>
                     <div className='max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto text-center flex justify-between items-center mb-3 text-2xl px-4'>
                         <p>Correct: <span className='text-green-500 font-semibold'>{increase}</span></p>
                         <p>Wrong: <span className='text-red-500 font-semibold'>{decrease}</span></p>

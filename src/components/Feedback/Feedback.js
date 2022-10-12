@@ -5,7 +5,7 @@ const Feedback = () => {
         <div className='bg-indigo-50 my-40'>
             <section>
                 <div className="mx-auto max-w-full px-4 py-8 sm:px-6 lg:px-24 text-center">
-                    <h2 className="text-xl font-bold sm:text-2xl">Customer Reviews</h2>
+                    <h2 className="text-xl font-bold sm:text-2xl">Examiner's Feedback</h2>
 
                     <div className="mt-4 flex items-center  w-44 mx-auto">
                     <p className="text-3xl font-medium">
