@@ -2,7 +2,7 @@
 
 ## Live Link: https://quiz-pro-online.netlify.app/
 
-## Repository Link: https://github.com/programming-hero-web-course2/b6-quiz-crackerz-DiptaPal
+## Repository Link: https://github.com/DiptaPal/quiz-pro
 
 ## <u>Features:</u>
 * user can see different pages through navbar
